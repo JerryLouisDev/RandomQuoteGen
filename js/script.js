@@ -66,9 +66,16 @@ function printQuote(){
 const randomQuote = getRandomQuote();
   html = `
     <p class= "quote">${randomQuote.quote}</p>
-    <p class= "source">${randomQuote.source}<span class= "citation">${randomQuote.citation}</span><span class= "year">${randomQuote.year}</span></p>
+    <p class= "source">${randomQuote.source}
   `
-
+if(randomQuote.citation){
+  html += `<span class= "citation">${randomQuote.citation}</span>`
+  
+}
+if(randomQuote.year){
+  html +=`<span class= "year">${randomQuote.year}</span>`
+}
+  html += `</p>`
 console.log(randomQuote)
 return document.querySelector('.quote-box').innerHTML = html
 
