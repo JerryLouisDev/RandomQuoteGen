@@ -12,35 +12,36 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 let html = '';
+//line 16 contains an array that holds object properties and values of five quotes
 let quotes = [
   {
-    author: "Nipsey Hussle" ,
-    source: "I Do This",
-    citation: "They say every man is defined by his reaction to any given situation. Well who would you want to define you Someone else or yourself? Whatever you do homie, give your heart to it, And stay strong",
+    source: "Nipsey Hussle" ,
+    quote: "They say every man is defined by his reaction to any given situation. Well who would you want to define you Someone else or yourself? Whatever you do homie, give your heart to it, And stay strong",
+    citation: "Song: I Do This",
     year: "2016"
   },
   {
-    author: "Jay-Z" ,
-    source: "BOSS",
-    citation: "We measure success by how many people successful next to you. Here we say you broke if everybody gets broke except for you",
+    source: "Jay-Z" ,
+    quote: "We measure success by how many people successful next to you. Here we say you broke if everybody gets broke except for you",
+    citation: "Song: BOSS",
     year: "2018"
   },
   {
-    author: "J.Cole" ,
-    source: "100.mil",
-    citation: "When I get defeated, believe I get up",
+    source: "J.Cole" ,
+    quote: "When I get defeated, believe I get up",
+    citation: "Song: 100.mil",
     year: "2021"
   },
   {
-    author: "Jeezy" ,
-    source: "Grind State",
-    citation: "Just know if there's a will there's a way",
+    source: "Jeezy" ,
+    quote: "Just know if there's a will there's a way",
+    citation: "Song: Grind State",
     year: "2015"
   },
   {
-    author: "21 Savage" ,
-    source: "my.life",
-    citation: "Give all the props to my mama 'cause no matter what, she always protected me",
+    source: "21 Savage" ,
+    quote: "Give all the props to my mama 'cause no matter what, she always protected me",
+    citation: "Song: my.life",
     year: "2021"
   },
 
@@ -50,7 +51,7 @@ let quotes = [
 /***
  * `getRandomQuote` function
 ***/
-
+//line 55 contains a function that generates a random number from the length of the array
 function getRandomQuote(){
 
   let ranNum = Math.floor(Math.random() * quotes.length);
@@ -59,14 +60,13 @@ function getRandomQuote(){
 
 }
 
-// getRandomQuote()
-
+//Line 64 contains a function that stores getRandomQuote in a randomQuote variable to gain the properties of the previous function to display on the page
 function printQuote(){
 
 const randomQuote = getRandomQuote();
   html = `
-    <p class= "quote">${randomQuote.citation}</p>
-    <p class= "source">${randomQuote.source}<span class= "citation">${randomQuote.author}</span><span class= "year">${randomQuote.year}</span></p>
+    <p class= "quote">${randomQuote.quote}</p>
+    <p class= "source">${randomQuote.source}<span class= "citation">${randomQuote.citation}</span><span class= "year">${randomQuote.year}</span></p>
   `
 
 console.log(randomQuote)
