@@ -4,12 +4,12 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// For assistance: 
+// For assistance:
   // Check the "Project Resources" section of the project instructions
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
-/*** 
- * `quotes` array 
+/***
+ * `quotes` array
 ***/
 let html = '';
 //line 16 contains an array that holds object properties and values of five quotes
@@ -44,7 +44,24 @@ let quotes = [
     citation: "Song: my.life",
     year: "2021"
   },
-
+  {
+    source: "Nipsey Hussle" ,
+    quote: "I say self made, meanin' I designed myself",
+    citation: "Song: Grinding All My Life",
+    year: "2018"
+  },
+  {
+    source: "Kendrick Lamar" ,
+    quote: "Don't stress, you was granted everything inside this planet. Anything you imagine, you possess",
+    citation: "Song: Blessed",
+    year: "2012"
+  },
+  {
+    source: "Shy Glizzy" ,
+    quote: "Swish, I'm balling, I'm so awesome",
+    citation: "Song: Awwsome",
+    year: "2013"
+  },
 ];
 
 
@@ -70,7 +87,7 @@ const randomQuote = getRandomQuote();
   `
 if(randomQuote.citation){
   html += `<span class= "citation">${randomQuote.citation}</span>`
-  
+
 }
 if(randomQuote.year){
   html +=`<span class= "year">${randomQuote.year}</span>`
